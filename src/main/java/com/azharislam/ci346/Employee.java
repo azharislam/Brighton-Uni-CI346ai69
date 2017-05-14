@@ -10,16 +10,16 @@ import lombok.Data;
 @Entity
 public class Employee {
 
-	private @Id @GeneratedValue Long id;
-	private String firstName;
-	private String lastName;
-	private String description;
-	
-	public Employee(){}
+	public @Id @GeneratedValue Long id;
+	public String firstName;
+	public String lastName;
+	public String shift;
 
-	public Employee (String firstName, String lastName, String description) {
-		this.firstName=firstName;
-		this.lastName=lastName;
-		this.description=description;
+	public Employee() {}
+
+	public Employee(String firstName, String lastName, String shift) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.shift = shift;
 	}
 }

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component //marked component so it can auto be picked up by @SpringBootApplication
+@Component
 public class DatabaseLoader implements CommandLineRunner {
 
 	private final EmployeeRepository repository;
@@ -16,6 +16,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
-		this.repository.save(new Employee("Frodo", "Baggins", "ring bearer"));
+		this.repository.save(new Employee("Sam", "Grant", "Monday Night"));
+		this.repository.save(new Employee("John", "Pridham", "Tuesday Day"));
 	}
 }
